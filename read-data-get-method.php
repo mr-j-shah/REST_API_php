@@ -3,11 +3,7 @@
     header("Access-Control-Allow-Origin: *");
     header('content-type: application/json; charset=utf-8');
     header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
-    $servername="localhost";
-    $user="root";
-    $password="";
-    $db="jinay";
-    $conn = new mysqli($servername, $user, $password,$db);
+    include("config.php")
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
